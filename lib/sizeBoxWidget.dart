@@ -18,21 +18,20 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('Simple App'),
-          ),
-          body: Center(
-            child: Container(
-              color: Colors.cyan,
-              child: Padding(
-                padding: EdgeInsets.all(15),
-                child: Text(
-                  'hello',
-                  style: TextStyle(fontSize: 50),
-                ),
-              ),
+        appBar: AppBar(
+          title: Text('Simple App'),
+        ),
+        body: SizedBox.fromSize(
+          child: Card(
+            color: Colors.orange,
+            child: Center(
+              child: Text("hello"),
             ),
-          )),
+          ),
+          // height: double.infinity,
+          // width: double.infinity,
+        ),
+      ),
     );
   }
 }
