@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -18,23 +17,23 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          // backgroundColor: Color.fromARGB(255, 129, 165, 30),
-          // actions: [Icon(Icons.more_vert)],
-          // actionsIconTheme: IconThemeData(size: 40, color: Colors.purple),
-
-          title: Text("title"),
-          // textTheme: TextTheme(
-          //     headline6: TextStyle(color: Color.fromARGB(255, 199, 27, 27))),
-          // elevation: 25,
-          // shadowColor: Colors.red,
-
-          // toolbarHeight: 150,
-          // toolbarOpacity: 0.5,
+          title: Text('Simple App'),
         ),
-        // drawer: Drawer(),
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            // color: Colors.cyan,
+            child: Placeholder(
+              // color: Colors.blue,
+              // strokeWidth: 15,
+              // fallbackHeight: 60,
+              // fallbackWidth: 70,
+            ),
+          ),
+        ),
       ),
     );
   }
