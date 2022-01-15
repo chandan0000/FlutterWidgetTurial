@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertarial/cardwidget.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var temp = 0;
   final person = List<String>.generate(50, (i) => 'Person $i');
   int index = 0;
   @override
@@ -23,18 +25,27 @@ class _MyAppState extends State<MyApp> {
       title: 'App title',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("AppBar"),
-        ),
-        body: Center(
-          child: Text(
-            "hello",
-            style: GoogleFonts.roboto(
-                color: Color.fromARGB(255, 243, 33, 114), fontSize: 50),
-            // style: GoogleFonts.almarai(),
+          appBar: AppBar(
+            title: Text("AppBar"),
           ),
-        ),
-      ),
+          body: Center(
+            child: Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('$temp'),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        temp = Random().nextInt(1000);
+                      });
+                    },
+                    child: Text('Random Number'),
+                  )
+                ],
+              ),
+            ),
+          )),
     );
   }
 }

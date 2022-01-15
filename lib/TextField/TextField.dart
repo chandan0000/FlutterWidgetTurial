@@ -32,28 +32,31 @@ class _MyAppState extends State<MyApp> {
           padding: EdgeInsets.symmetric(horizontal: 30),
           child: Center(
             child: TextField(
+              // keyboardType: TextInputType.number,
+              // autofocus: true,
+              // enabled: false,
+              // readOnly: true,
+
               decoration: InputDecoration(
-                hintText: 'Email',
-                border: OutlineInputBorder(),
-                icon: Icon(Icons.email),
-                // prefix: Icon(Icons.emoji_people_rounded),
-                // suffix: Icon(Icons.emoji_people_rounded),
-                suffixText: 'User',
-                // prefix: CircularProgressIndicator(),
-              ),
-              cursorColor: Colors.green,
-              cursorHeight: 5,
-              maxLines: 1,
-              maxLength: 4,
-              // obscureText: true,
-              // obscuringCharacter: '*',
-              toolbarOptions: ToolbarOptions(
-                copy: true,
-                selectAll: true,
-                paste: true,
-                cut: true,
-              ),
-              
+                  // border: InputBorder.none
+                  // labelText: 'Fisrt Name',
+                  // filled: true,
+                  // fillColor: Colors.orangeAccent,
+                  // border: OutlineInputBorder(
+                  // borderRadius: BorderRadius.circular(50),
+                  // borderSide: BorderSide.none)
+
+                  hintText: 'Eamil',
+                  helperText: 'or UserName',
+                  //  border: InputBorder.none
+                  border: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Color.fromARGB(255, 244, 54, 181)))
+                  // hintStyle: TextStyle(color: Colors.redAccent, fontSize: 30)),
+                  ),
             ),
           ),
         ),

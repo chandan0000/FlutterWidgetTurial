@@ -27,11 +27,18 @@ class _MyAppState extends State<MyApp> {
           title: Text("AppBar"),
         ),
         body: Center(
-          child: Text(
-            "hello",
-            style: GoogleFonts.roboto(
-                color: Color.fromARGB(255, 243, 33, 114), fontSize: 50),
-            // style: GoogleFonts.almarai(),
+          child: CircleAvatar(
+            backgroundColor: Colors.blueGrey,
+            radius: 200,
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://images.unsplash.com/photo-1642215115074-4d7e7ebab475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'),
+              radius: 190,
+              // minRadius: 400,
+              // maxRadius: 800,
+              // backgroundColor: Colors.black,
+              child: Text("hello"),
+            ),
           ),
         ),
       ),
