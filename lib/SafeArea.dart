@@ -1,5 +1,5 @@
 import 'dart:html';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:flutter/material.dart';
 import 'package:fluttertarial/cardwidget.dart';
 
@@ -26,12 +26,13 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text("AppBar"),
         ),
-        body: Center(
+        body: SafeArea(
+          // bottom: false,
+          // top: ,
+          minimum: EdgeInsets.all(10),
           child: Text(
-            "hello",
-            style: GoogleFonts.roboto(
-                color: Color.fromARGB(255, 243, 33, 114), fontSize: 50),
-            // style: GoogleFonts.almarai(),
+            'hello',
+            style: TextStyle(color: Colors.blue, fontSize: 50),
           ),
         ),
       ),
